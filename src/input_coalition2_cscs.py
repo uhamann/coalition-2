@@ -120,21 +120,26 @@ def input(in_msg, timeslot=None):
     if in_msg.nrt:
         in_msg.base_dir_sat  = "/data/cinesat/in/eumetcast1/"
         in_msg.base_dir_ctth = "/data/cinesat/in/safnwc/"
+        #in_msg.cosmoDir      = '/data/cinesat/in/cosmo/'                          # e.g. 2016052515_05_cosmo-1_UV_swissXXL
         in_msg.base_dir_ct   = "/data/cinesat/in/safnwc/"
         in_msg.nowcastDir    = "/data/cinesat/out/C2-BT-forecasts/"               # directory containing the forecasted brightness temperatures
         in_msg.labelsDir     = '/data/cinesat/out/labels/'
-        in_msg.cosmoDir      = '/data/cinesat/in/cosmo/'                          # e.g. 2016052515_05_cosmo-1_UV_swissXXL
     else:
-        #base_dir_sat  = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/radiance_HRIT/%Y/%m/%d/")
-        in_msg.base_dir_sat  = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/radiance_HRIT/case-studies/%Y/%m/%d/")
-        in_msg.base_dir_ctth = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/SAFNWC_v2016/%Y/%m/%d/CTTH/")    # NWCSAF produced by MeteoSwiss with RSS
+        in_msg.base_dir_sat  = "./eumetcast/"
+        #in_msg.base_dir_sat  = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/radiance_HRIT/case-studies/%Y/%m/%d/")
+        in_msg.base_dir_ctth = "./safnwc/"
+        #in_msg.base_dir_ctth = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/SAFNWC_v2016/%Y/%m/%d/CTTH/")    # NWCSAF produced by MeteoSwiss with RSS
+        #in_msg.base_dir_sat  = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/radiance_HRIT/%Y/%m/%d/")
         #in_msg.base_dir_ctth = in_msg.datetime.strftime("/data/OWARNA/hau/database/meteosat/SAFNWC/%Y/%m/%d/CTTH/")         # NWCSAF produced by EUMETSAT   with FDS
-        in_msg.base_dir_ct   = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/SAFNWC_v2016/%Y/%m/%d/CT/")      # NWCSAF produced by MeteoSwiss with RSS
-        in_msg.nowcastDir    = '/data/COALITION2/database/meteosat/rad_forecast/%Y-%m-%d/channels/'                          # directory containing the forecasted brightness temperatures
-        in_msg.labelsDir     = '/data/COALITION2/PicturesSatellite/%Y-%m-%d/%Y-%m-%d_labels_%(area)s/'
-        #in_msg.labelsDir     = '/opt/users/'+in_msg.user+'/PyTroll/scripts/labels/'
-        in_msg.cosmoDir      = in_msg.datetime.strftime('/data/COALITION2/database/cosmo/wind/%Y/%m/%d/') #20150515_cosmo2_ccs4c2 / 2015051506_00_cosmo2_UVccs4c2.nc or 2015070706_00_cosmo2_UV_ccs4c2.nc
+        in_msg.cosmoDir      = './cosmo/'                          # e.g. 2016052515_05_cosmo-1_UV_swissXXL
+        #in_msg.cosmoDir      = in_msg.datetime.strftime('/data/COALITION2/database/cosmo/wind/%Y/%m/%d/') #20150515_cosmo2_ccs4c2 / 2015051506_00_cosmo2_UVccs4c2.nc or 2015070706_00_cosmo2_UV_ccs4c2.nc
         #in_msg.cosmoDir     = '/data/COALITION2/database/cosmo/test_wind/'
+        #in_msg.base_dir_ct   = in_msg.datetime.strftime("/data/COALITION2/database/meteosat/SAFNWC_v2016/%Y/%m/%d/CT/")      # NWCSAF produced by MeteoSwiss with RSS
+        in_msg.nowcastDir    = './channels/'                                                                                  # directory containing the forecasted brightness temperatures
+        #in_msg.nowcastDir    = '/data/COALITION2/database/meteosat/rad_forecast/%Y-%m-%d/channels/'                          # directory containing the forecasted brightness temperatures
+        in_msg.labelsDir     = './labels/'
+        #in_msg.labelsDir     = '/data/COALITION2/PicturesSatellite/%Y-%m-%d/%Y-%m-%d_labels_%(area)s/'
+        #in_msg.labelsDir     = '/opt/users/'+in_msg.user+'/PyTroll/scripts/labels/'
         
     # channels needed to produce the coalition2 product
     in_msg.RGBs=[]
@@ -165,14 +170,14 @@ def input(in_msg, timeslot=None):
     # mask that removed the thin cirrus
     in_msg.aux_results=[]
     #in_msg.aux_results.append('mask_cirrus')
-    #in_msg.aux_results.append('tests_glationation')
-    #in_msg.aux_results.append('tests_optical_thickness')
-    #in_msg.aux_results.append('tests_updraft')
-    #in_msg.aux_results.append('tests_small_ice')
-    #in_msg.aux_results.append('indicator_glationation')
-    #in_msg.aux_results.append('indicator_optical_thickness')
-    #in_msg.aux_results.append('indicator_updraft')
-    #in_msg.aux_results.append('indicator_small_ice')
+    in_msg.aux_results.append('tests_glationation')
+    in_msg.aux_results.append('tests_optical_thickness')
+    in_msg.aux_results.append('tests_updraft')
+    in_msg.aux_results.append('tests_small_ice')
+    in_msg.aux_results.append('indicator_glationation')
+    in_msg.aux_results.append('indicator_optical_thickness')
+    in_msg.aux_results.append('indicator_updraft')
+    in_msg.aux_results.append('indicator_small_ice')
     #in_msg.aux_results.append('CloudType')
     #in_msg.aux_results.append('fourth_mask')
     #in_msg.aux_results.append('developing_mask')
@@ -216,9 +221,9 @@ def input(in_msg, timeslot=None):
         #in_msg.outputDir = '/data/cinesat/out/'
         in_msg.outputDir='./pics/'
     else:
-        #in_msg.outputDir='./pics/'
-        in_msg.outputDir = '/data/COALITION2/PicturesSatellite/%Y-%m-%d/%Y-%m-%d_%(rgb)s_%(area)s/'
-   
+        in_msg.outputDir='./pics/'
+        #in_msg.outputDir = '/data/COALITION2/PicturesSatellite/%Y-%m-%d/%Y-%m-%d_%(rgb)s_%(area)s/'
+
     in_msg.scpOutput = False
     #default: in_msg.scpOutputDir="las@lomux240:/www/proj/OTL/WOL/cll/satimages"
     #default: in_msg.scpID="-i /home/cinesat/.ssh/id_dsa_las"
