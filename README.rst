@@ -35,6 +35,7 @@ Usage
 =====
 
 python PYTROLLHOME/scripts/produce_forecasts_nrt_py3.py input_coalition2_cronjob
+
 python PYTROLLHOME/scripts/plot_coalition2.py input_coalition2_cronjob
 
 Input datasets
