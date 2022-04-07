@@ -22,6 +22,7 @@ Work flow
 -----------
 
 To perform a detection, following steps have to be archived:
+
 * Prediction of the observed brightness temperatures
 * A series of threshold tests to identify developing and mature thunderstorms
 * Parallax correction of the resulting image
