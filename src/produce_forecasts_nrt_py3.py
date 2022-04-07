@@ -859,17 +859,17 @@ if __name__ == '__main__':
                             PIK = []
                             #aux_dir="/data/COALITION2/PicturesSatellite/2022-04-01/aux_results/"
                             aux_dir="./aux_results/"                            
-                            outputFile=aux_dir+rgb+"_"+str(ind_time)+".png"
+                            auxFile=aux_dir+rgb+"_"+str(ind_time)+".png"
                             if area == "ccs4":
                                     PIK.append( forecasts_out[channel_nr[rgb],ind_time,:,:])
                                     #make_figure(np.array(forecasts_out[channel_nr[rgb],ind_time,:,:]),
-                                    #            obj_area, outputFile, colorbar=True, text_to_write = rgb+"_"+str(ind_time), nan_value=0.0)
+                                    #            obj_area, auxFile, colorbar=True, text_to_write = rgb+"_"+str(ind_time), nan_value=0.0)
                             elif area == "ccs4c2": 
                                     PIK.append( forecasts_out[channel_nr[rgb],ind_time,20:nx-40,85:ny-135])
                                     #make_figure(np.array(forecasts_out[channel_nr[rgb],ind_time,20:nx-40,85:ny-135]),
-                                    #            obj_area, outputFile, colorbar=True, text_to_write = rgb+"_"+str(ind_time), linewidth = 1)
+                                    #            obj_area, auxFile, colorbar=True, text_to_write = rgb+"_"+str(ind_time), linewidth = 1)
                                     #make_figure(np.array(forecasts_out[channel_nr[rgb],ind_time,20:nx-40,85:ny-135]),
-                                    #            get_area_def("ccs4"), outputFile, nan_value=0.0)
+                                    #            get_area_def("ccs4"), auxFile, nan_value=0.0)
                             else:
                                     print("unknown area, saving entire domain")
                                     PIK.append( forecasts_out[channel_nr[rgb],ind_time,:,:])
