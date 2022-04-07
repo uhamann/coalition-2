@@ -26,6 +26,10 @@ To perform a detection, following steps have to be archived:
 * A series of threshold tests to identify developing and mature thunderstorms
 * Parallax correction of the resulting image
 
+* MSG SEVIRI 3.9 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 6.2 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 7.3 µm channel (rapid scan each 5 min)
+
 Installation
 ============
 
@@ -34,7 +38,7 @@ python setup.py
 Usage
 =====
 
-python PYTROLLHOME/scripts/produce_forecasts_nrt_py3.py input_coalition2_cronjob \\
+python PYTROLLHOME/scripts/produce_forecasts_nrt_py3.py input_coalition2_cronjob<br>
 python PYTROLLHOME/scripts/plot_coalition2.py input_coalition2_cronjob
 
 Input datasets
