@@ -1,4 +1,4 @@
-pysteps - Python framework for short-term ensemble prediction systems
+COALITION-2
 =====================================================================
 
 .. start-badges
