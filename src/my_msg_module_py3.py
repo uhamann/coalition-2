@@ -434,8 +434,8 @@ def create_dir(outputFile):
 
     path = dirname(outputFile)
     if not exists(path):
-        if in_msg.verbose:
-            print('... create output directory: ' + path)
+        #if in_msg.verbose:
+        #    print('... create output directory: ' + path)
         makedirs(path)
     return outputFile
 

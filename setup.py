@@ -47,6 +47,7 @@ requirements = [
     "pyorbital",
     "h5py",
     "sympy",
+    "scikit-image",
 ]
 
 setup(

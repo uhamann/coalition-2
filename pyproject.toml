@@ -13,6 +13,7 @@ requires = [
     "pyorbital",
     "h5py",
     "sympy",
+    "scikit-image",
 ]
 
 #build-backend = "setuptools.build_meta"
