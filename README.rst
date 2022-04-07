@@ -41,18 +41,18 @@ Input datasets
 ===========
 The overall goal of COALITION-2 is to identify, track and nowcast the position and intensification of convectively active regions in an accurate, continuous and robust manner by exploiting satellite observations. COALITION-2 uses the infrared channels of the MSG/SEVIRI instrument, wind speed and direction as predicted by the weather model COSMO-CH and some products of the Nowcasting SAF software, such as the cloud top height & pressure:
 
-MSG SEVIRI 3.9 µm channel (rapid scan each 5 min)
-MSG SEVIRI 6.2 µm channel (rapid scan each 5 min)
-MSG SEVIRI 7.3 µm channel (rapid scan each 5 min)
-MSG SEVIRI 8.7 µm channel (rapid scan each 5 min)
-MSG SEVIRI 9.7 µm channel (rapid scan each 5 min)
-MSG SEVIRI 10.8 µm channel (rapid scan each 5 min)
-MSG SEVIRI 12.0 µm channel (rapid scan each 5 min)
-MSG SEVIRI 13.4 µm channel (rapid scan each 5 min)
-COSMO wind (u,v) at 800, 500, 300 hPa (COSMO output every hour)
-Nowcasting SAF Cloud Top Height (rapid scan each 5 min)
-Nowcasting SAF Cloud Top Pressure (rapid scan each 5 min)
-Nowcasting SAF Cloud Type [Optional] (rapid scan each 5 min)
+* MSG SEVIRI 3.9 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 6.2 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 7.3 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 8.7 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 9.7 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 10.8 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 12.0 µm channel (rapid scan each 5 min)
+* MSG SEVIRI 13.4 µm channel (rapid scan each 5 min)
+* COSMO wind (u,v) at 800, 500, 300 hPa (COSMO output every hour)
+* Nowcasting SAF Cloud Top Height (rapid scan each 5 min)
+* Nowcasting SAF Cloud Top Pressure (rapid scan each 5 min)
+* Nowcasting SAF Cloud Type [Optional] (rapid scan each 5 min)
 
 Further information
 ====================
