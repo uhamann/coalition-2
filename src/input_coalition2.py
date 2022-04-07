@@ -133,7 +133,7 @@ def input(in_msg, timeslot=None):
         in_msg.nowcastDir    = '/data/COALITION2/database/meteosat/rad_forecast/%Y-%m-%d/channels/'                          # directory containing the forecasted brightness temperatures
         in_msg.labelsDir     = '/data/COALITION2/PicturesSatellite/%Y-%m-%d/%Y-%m-%d_labels_%(area)s/'
         #in_msg.labelsDir     = '/opt/users/'+in_msg.user+'/PyTroll/scripts/labels/'
-        in_msg.cosmoDir      = t_sat.strftime('/data/COALITION2/database/cosmo/wind/%Y/%m/%d/') #20150515_cosmo2_ccs4c2 / 2015051506_00_cosmo2_UVccs4c2.nc or 2015070706_00_cosmo2_UV_ccs4c2.nc
+        in_msg.cosmoDir      = in_msg.datetime.strftime('/data/COALITION2/database/cosmo/wind/%Y/%m/%d/') #20150515_cosmo2_ccs4c2 / 2015051506_00_cosmo2_UVccs4c2.nc or 2015070706_00_cosmo2_UV_ccs4c2.nc
         #in_msg.cosmoDir     = '/data/COALITION2/database/cosmo/test_wind/'
         
     # channels needed to produce the coalition2 product
