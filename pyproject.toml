@@ -4,6 +4,15 @@ requires = [
     "setuptools>=40.8.0",
     "Cython>=0.29.2",
     "numpy>=1.13",
+    "scipy",
+    "satpy",
+    "pydecorate",
+    "pycoast",
+    "matplotlib",
+    "netCDF4",
+    "pyorbital",
+    "h5py",
+    "sympy",
 ]
 
 #build-backend = "setuptools.build_meta"

@@ -38,6 +38,15 @@ requirements = [
     "wheel",
     "setuptools>=40.8.0",
     "numpy",
+    "scipy",
+    "satpy",
+    "pydecorate",
+    "pycoast",
+    "matplotlib",
+    "netCDF4",
+    "pyorbital",
+    "h5py",
+    "sympy",
 ]
 
 setup(

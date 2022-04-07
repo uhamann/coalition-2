@@ -533,10 +533,10 @@ def make_figure(values, obj_area, outputFile, colorbar=True, text_to_write=None,
         plt.contour( values, contour_value, linewidths=linewidth, origin='upper' )
         #plt.contour( values, contour_value, linewidths=linewidth, origin='lower' )
 
-    PIL_image = fig2img ( fig )
-    PIL_image.show()
-    print(vmin,vmax)
-    quit()
+    #PIL_image = fig2img ( fig )
+    #PIL_image.show()
+    #print(vmin,vmax)
+    #quit()
         
     if text_to_write is not None:
         ax.text(0.95, 0.01, text_to_write,

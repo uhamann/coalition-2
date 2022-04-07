@@ -69,7 +69,7 @@ class input_msg_class:
             print("... use shape directory ", self.mapDir)
          else:
             self.mapDir = "/data/OWARNA/hau/maps_pytroll/"
-      elif socket.gethostname()[0:7] == 'keschln' or socket.gethostname()[0:7]=="eschaln":
+      elif socket.gethostname()[0:7] == 'keschln' or socket.gethostname()[0:7]=="eschaln" or socket.gethostname()[0:3]=="tsa":
          self.mapDir = "/store/msrad/sat/pytroll/shapes/"
          print("... use shape directory ", self.mapDir)
       if self.mapDir == "": 
@@ -91,7 +91,7 @@ class input_msg_class:
          else:
             print("*** ERROR, unknown location of the ttf-file, environment variable VENV required")
             quit()
-      elif socket.gethostname()[0:7] == 'keschln' or socket.gethostname()[0:7]=="eschaln":
+      elif socket.gethostname()[0:7] == 'keschln' or socket.gethostname()[0:7]=="eschaln" or socket.gethostname()[0:3]=="tsa":
          self.font_file = "/usr/share/fonts/dejavu/DejaVuSansMono.ttf"
       else:
          print("*** ERROR, unknown computer "+socket.gethostname()+", unknown location of the ttf-file")
