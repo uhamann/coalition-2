@@ -857,7 +857,9 @@ if __name__ == '__main__':
                             print("... pickle data to file: ", outputFile)
                             
                             PIK = []
-                            outputFile="/data/COALITION2/PicturesSatellite/2022-04-01/aux_results/"+rgb+"_"+str(ind_time)+".png"
+                            #aux_dir="/data/COALITION2/PicturesSatellite/2022-04-01/aux_results/"
+                            aux_dir="./aux_results/"                            
+                            outputFile=aux_dir+rgb+"_"+str(ind_time)+".png"
                             if area == "ccs4":
                                     PIK.append( forecasts_out[channel_nr[rgb],ind_time,:,:])
                                     #make_figure(np.array(forecasts_out[channel_nr[rgb],ind_time,:,:]),
