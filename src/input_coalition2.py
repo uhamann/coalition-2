@@ -50,7 +50,7 @@ def input(in_msg, timeslot=None):
     else:
         in_msg.update_datetime(timeslot.year, timeslot.month, timeslot.day, timeslot.hour, timeslot.minute)
         in_msg.nrt = check_near_real_time(in_msg.datetime, 120)
-            
+    
     in_msg.no_NWCSAF = False
 
     #----------------

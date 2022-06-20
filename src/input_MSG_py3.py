@@ -14,10 +14,10 @@ def input(in_msg, timeslot=None):
     #in_msg.sat = "meteosat"
     #in_msg.sat_nr=8
     #in_msg.RSS=False 
-    in_msg.sat_nr=9
-    in_msg.RSS=True
-    #in_msg.sat_nr=10
+    #in_msg.sat_nr=9
     #in_msg.RSS=True
+    in_msg.sat_nr=10
+    in_msg.RSS=True
     #in_msg.sat_nr=11
     #in_msg.RSS=False
     
@@ -38,10 +38,13 @@ def input(in_msg, timeslot=None):
         in_msg.update_datetime(year, month, day, hour, minute)
         # !!!  if archive is used, adjust meteosat09.cfg accordingly !!!
 
-    if timeslot is not None:
+    if timeslot is None:
+        in_msg.init_datetime(timeslot=timeslot)
+    else:
         in_msg.update_datetime(timeslot.year, timeslot.month, timeslot.day, timeslot.hour, timeslot.minute)
-        in_msg.nrt = check_near_real_time(in_msg.datetime, 120)
+        in_msg.nrt = check_near_real_time(in_msg.datetime, 120)   
 
+        
     if in_msg.nrt:
         in_msg.input_dir="/data/cinesat/in/eumetcast1/"
     else:
